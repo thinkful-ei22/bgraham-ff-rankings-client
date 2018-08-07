@@ -17,9 +17,16 @@ export function HeaderBar(props) {
         //         <button onClick={() => this.logOut()}>Log out</button>
         //     );
         // }
+
+       
+
+       
+
+
         return (
             <div className="header-bar">
         <h1>FF Draft Rankings</h1>
+
             </div>
         );
     }

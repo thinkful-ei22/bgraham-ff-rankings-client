@@ -1,4 +1,4 @@
-import { Switch, Route, Redirect } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
 import React from 'react';
 import StdOvrList from './std-overall-list';
 import PprOvrList from './ppr-overall-list';
@@ -18,10 +18,14 @@ import KList from './std-k-list';
 
 import DstList from './std-dst-list';
 
+import HeaderBar from './header-bar';
 
 const Main = () => (
     <main>
+    <Route path='/' component={HeaderBar}/>
+
       <Switch>
+          
       <Route path='/qb' component={QbList}/>
      
       <Route path='/k' component={KList}/>
@@ -38,9 +42,11 @@ const Main = () => (
       <Route path='/ppr/te' component={PprTeList}/>
 
         <Route path='/ppr/overall' component={PprOvrList}/>
-        <Route path='/'component={StdOvrList}>
-        <Redirect to='/std/overall'/> 
+
+        <Route path='*'component={StdOvrList}>
+       
         </Route>
+
       </Switch>
     </main>
   )

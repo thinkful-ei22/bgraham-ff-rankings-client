@@ -2,7 +2,6 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import Main from './main';
-import HeaderBar from './header-bar';
 
 export class App extends React.Component {
     componentDidUpdate(prevProps) {
@@ -29,9 +28,7 @@ export class App extends React.Component {
     render() {
         return (
             <div className="app">
-                <HeaderBar />
-                <Main />
-                
+                <Main /> 
             </div>
         );
     }

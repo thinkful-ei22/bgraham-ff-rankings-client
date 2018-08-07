@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
-
+import {Link} from 'react-router-dom';
 export class PlayersList extends React.Component{
     
    
@@ -36,10 +36,32 @@ export class PlayersList extends React.Component{
             return <div>{this.props.error}</div>;
         }
 
+
+        let scoring = this.props.location.pathname.includes('/std') ? '/ppr' : '/std'
+
+        scoring = this.props.location.pathname === '/' ? '/ppr' : scoring
+
+         let position= this.props.location.pathname.split('/')[2];
+
+         position = typeof position === 'undefined' ? 'overall' : position
+
         return (
            <div> 
 <div className="header-bar">
         <h1>Running Backs (Standard Scoring)</h1>
+        Switch Scoring System to: <Link to={`${scoring}/${position}`}>PPR</Link> 
+
+        <nav className="header-nav">
+<br />
+        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/qb'> QB </Link>|
+        <b> RB </b>|
+        <Link to='/std/wr'> WR </Link>|
+        <Link to='/std/te'> TE </Link>|
+        <Link to='/k'> K </Link>|
+        <Link to='/dst'> DST</Link> 
+</nav>
+
             </div>
         <ol>
             {playersListString}

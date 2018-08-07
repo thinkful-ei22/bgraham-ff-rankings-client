@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
-
+import {Link} from 'react-router-dom'
 export class PlayersList extends React.Component{
     
    
@@ -40,6 +40,17 @@ export class PlayersList extends React.Component{
            <div> 
 <div className="header-bar">
         <h1>Defense/Special Teams</h1>
+
+        <nav className="header-nav">
+<br />
+        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/qb'> QB </Link>|
+        <Link to='/std/rb'> RB </Link>|
+        <Link to='/std/wr'> WR </Link>|
+        <Link to='/std/te'> TE </Link>|
+        <Link to='/k'> K </Link>|
+        <b> DST</b> 
+</nav>
             </div>
         <ol>
             {playersListString}
