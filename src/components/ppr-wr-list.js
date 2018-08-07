@@ -4,12 +4,18 @@ import {fetchPlayers} from '../actions/players';
 
 export class PlayersList extends React.Component{
     
+   
     componentDidMount(){
+        let category = 'ppr';
+        let position = 'wr';
+
         console.log('Component did mount');
-        this.props.dispatch(fetchPlayers());
+        this.props.dispatch(fetchPlayers(category, position));
     }
 
     render(){
+
+        
         const playersListString = this.props.players.map((player,index) => {
             //console.log(player);
 
@@ -32,8 +38,9 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-            <h1>FF Draft Rankings - Overall (Standard Scoring)</h1>
-
+<div className="header-bar">
+        <h1>Wide Receivers (PPR Scoring)</h1>
+            </div>
         <ol>
             {playersListString}
         </ol>

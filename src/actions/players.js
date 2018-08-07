@@ -1,11 +1,15 @@
 import { API_BASE_URL } from '../config';
 
-export const fetchPlayers = () => dispatch =>
+export const fetchPlayers = (category, position) => dispatch =>
 {
   dispatch(fetchPlayersRequest());
+
+    const serverURL = `${API_BASE_URL}/${category}/${position}`;
   return(
-        fetch (`${API_BASE_URL}/std/overall`, {
+      
+        fetch (`${serverURL}`, {
              method: 'GET'
+
         })
         .then(res => {
             if (!res.ok) {
