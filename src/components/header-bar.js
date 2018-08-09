@@ -26,7 +26,6 @@ export function HeaderBar(props) {
         return (
             <div className="header-bar">
         <h1>FF Draft Rankings</h1>
-
             </div>
         );
     }

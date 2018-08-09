@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
-
+import './playerList.css';
 export class PlayersList extends React.Component{
     
    
@@ -22,7 +22,7 @@ export class PlayersList extends React.Component{
 
             return (
               <li key={index}>
-                {player.Name}({player.Team}) - {player.Position}              <br />
+                {player.Name}({player.Team}) - {player.Position} - <i>User Ranking: {player.UserRank}</i> - <i>Expert Ranking: {player.Rank}</i>           <br />
                 <br />
 
               </li>
@@ -61,10 +61,11 @@ export class PlayersList extends React.Component{
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
 </nav>
+
             </div>
-        <ol>
+        <ul className="playerList">
             {playersListString}
-        </ol>
+        </ul>
         </div>
         );
     }

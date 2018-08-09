@@ -2,6 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
+import './playerList.css';
+
 export class PlayersList extends React.Component{
     
    
@@ -13,6 +15,11 @@ export class PlayersList extends React.Component{
         this.props.dispatch(fetchPlayers(category, position));
     }
 
+    onClick(event) {
+        event.preventDefault();
+        console.log('button is responding');
+        document.getElementsByClassName('submit-user-ranking').style.display='block';
+    }
     render(){
 
         
@@ -21,7 +28,8 @@ export class PlayersList extends React.Component{
 
             return (
               <li key={index}>
-                {player.Name}({player.Team}) - {player.Position}              <br />
+                {player.Name}({player.Team}) - {player.Position} - <i>User Ranking: 
+                <input type="number" name="user-rank-edit-entry" id="user-rank-edit-form" placeholder={player.UserRank} />  </i> - <i>Expert Ranking: {player.Rank}</i>           <br />
                 <br />
 
               </li>
@@ -47,7 +55,7 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="header-bar">
+<div className="sub-header">
         <h1>Wide Receivers (Standard Scoring)</h1>
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>PPR</Link> 
 
@@ -62,11 +70,15 @@ export class PlayersList extends React.Component{
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
 </nav>
+<br />
+
+<button name="edit-user-rank" className="edit-user-ranking" onClick = {e => this.onClick(e)}>Edit User Rank </button>
+<button className="submit-user-ranking">Submit User Rank </button>
 
             </div>
-        <ol>
+            <ul className="playerList">
             {playersListString}
-        </ol>
+        </ul>
         </div>
         );
     }

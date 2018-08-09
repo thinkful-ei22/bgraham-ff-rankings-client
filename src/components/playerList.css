@@ -1,0 +1,9 @@
+.playerList {
+    list-style: none;
+}
+#user-rank-edit-form {
+    /* display: none; */
+}
+.submit-user-ranking{
+    display: none;
+}
