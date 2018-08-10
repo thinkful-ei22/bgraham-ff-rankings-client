@@ -23,9 +23,7 @@ import HeaderBar from './header-bar';
 const Main = () => (
     <main>
     <Route path='/' component={HeaderBar}/>
-
       <Switch>
-          
       <Route path='/qb' component={QbList}/>
      
       <Route path='/k' component={KList}/>

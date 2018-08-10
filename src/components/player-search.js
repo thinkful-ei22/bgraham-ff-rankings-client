@@ -2,7 +2,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-
+import './playerList.css';
 export class PlayerSearch extends React.Component {
     state = {
         filter: ''
@@ -59,10 +59,10 @@ if (this.state.filter){
 
         return (
             <div className="player-search">
-                <form onChange={(e) => this.search(this.props.category, this.props.position, e)}>
+                <form onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
                     <input type="search" ref={input => this.input = input} />
                     <button>Search</button>
-                    <button onClick= {() => this.reset()}>Reset</button>
+                    <button onClick= {(e) => this.reset(e)}>Reset</button>
                 </form>
                 <ul className="player-search-results">
                     {this.renderResults()}
