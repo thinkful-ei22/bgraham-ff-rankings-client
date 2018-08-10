@@ -21,7 +21,6 @@ export const searchPlayers = (category, position, name) => dispatch => {
     dispatch(searchPlayersRequest());
     search(category, position, name)
         .then(players => {
-          console.log('players: ', players)
             dispatch(searchPlayersSuccess(players))
         })
         .catch(error => dispatch(searchPlayersError(error)));

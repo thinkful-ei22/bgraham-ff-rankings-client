@@ -16,13 +16,11 @@ export const _search = (category, position, name)  =>
     let players=[];
     data.forEach(player => {
         if (player.Name.includes(name)){
-            console.log('player:' ,player);
             players.push(player);
         }
 
     });
 
-    //   console.log('players:', players);
       return players;
   })
   .catch (err => console.log(err));
