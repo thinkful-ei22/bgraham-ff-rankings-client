@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
 import './playerList.css';
+import PlayerSearch from './player-search';
 export class PlayersList extends React.Component{
     
    
@@ -15,28 +16,6 @@ export class PlayersList extends React.Component{
     }
 
     render(){
-
-        
-        const playersListString = this.props.players.map((player,index) => {
-            //console.log(player);
-
-            return (
-              <li key={index}>
-                {player.Name}({player.Team}) - {player.Position} - <i>User Ranking: {player.UserRank}</i> - <i>Expert Ranking: {player.Rank}</i>           <br />
-                <br />
-
-              </li>
-            );
-          });
-      
-
-        if (this.props.loading){
-            return <div>Loading...</div>;
-        }
-        if (this.props.error){
-            return <div>{this.props.error}</div>;
-        }
-
 
         let scoring = this.props.location.pathname.includes('/std') ? '/ppr' : '/std'
 
@@ -61,21 +40,21 @@ export class PlayersList extends React.Component{
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
 </nav>
+<PlayerSearch category="ppr" position="overall"/>
 
             </div>
-        <ul className="playerList">
-            {playersListString}
-        </ul>
+       
         </div>
         );
     }
 }
 
 const mapStateToProps = state => {
+    console.log('state', state);
     return {
-        players: state.players,
-        loading: state.loading,
-        error: state.error
+        players: state.players.players,
+        loading: state.players.loading,
+        error: state.players.error
     };
 };
 

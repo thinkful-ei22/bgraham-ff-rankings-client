@@ -1,6 +1,9 @@
-import {createStore, applyMiddleware} from 'redux';
+import {createStore, applyMiddleware, combineReducers} from 'redux';
 import thunk from 'redux-thunk';
-import playersReducer from './reducers/players';
+import players from './reducers/players';
+import search from './reducers/searchReducer';
 
 
-export default createStore(playersReducer, applyMiddleware(thunk));
+export default createStore(
+    combineReducers({players,search}) , applyMiddleware(thunk)
+);
