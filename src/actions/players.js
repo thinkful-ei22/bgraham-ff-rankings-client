@@ -1,6 +1,6 @@
 import { API_BASE_URL } from '../config';
 
-export const fetchPlayers = (category, position) => dispatch =>
+export const fetchPlayers = (category, position, sortBy) => dispatch =>
 {
   dispatch(fetchPlayersRequest());
 
@@ -8,15 +8,18 @@ export const fetchPlayers = (category, position) => dispatch =>
   return(
       
         fetch (`${serverURL}`, {
-             method: 'GET'
+             method: 'GET',
+
 
         })
         .then(res => {
             if (!res.ok) {
               return Promise.reject('Unable to reach server');
             }
+        
         return res.json();
         })
+        
         .then(data => {
             // console.log(data);
             dispatch(fetchPlayersSuccess(data))
