@@ -10,7 +10,6 @@ export class PlayersList extends React.Component{
     componentDidMount(){
         let category = 'ppr';
         let position = 'overall';
-
         console.log('Component did mount');
         this.props.dispatch(fetchPlayers(category, position));
     }

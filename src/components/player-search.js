@@ -2,13 +2,66 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
+import {fetchUpdatedPlayers} from '../actions/update-players';
+import Player from './player';
 import './playerList.css';
+
 export class PlayerSearch extends React.Component {
-    state = {
+   constructor(props){
+   super(props);
+    this.state = {
         filter: '',
-        sort: ''
+        sort: '',
+        id: '',
         }
+    }
+
+
+ 
+   
+
+    
+
+    search(category, position, e) {
+        e.preventDefault();
+        if (this.input.value.trim() === '') {
+            return;
+        }
+        this.setState({
+            filter: this.input.value
+        }) 
+    }
+
+    reset(){
+        this.input.value = '';
+        this.setState({
+            filter: ''
+        }) 
+    }
+
+sort(e){
+
+    this.setState({
+        sort: ''
+    })
+
+    if (e.target.value){
+    }
+
+
+    this.setState({
+        sort: e.target.value
+    })
+}
+
+update(e){
+    // e.preventDefault();
+    console.log(this.input);
+}
+
+
     renderResults() {
+
         if (this.props.loading) {
             return <Spinner spinnername="circle" noFadeIn />;
         }
@@ -19,6 +72,8 @@ export class PlayerSearch extends React.Component {
         
 let filteredPlayers = this.props.players;
 
+
+let expandedClass =this.state.expandClass;
 
 if (this.state.filter){
 
@@ -99,13 +154,16 @@ if (this.state.filter){
 
 
         }
+
+      
+
         const playersListString = filteredPlayers.map((player,index) => {
+
             return(
-            <li key={index}>
-            {player.Name}({player.Team}) - {player.Position} - <i>User Ranking: {player.UserRank}</i> - <i>Expert Ranking: {player.Rank}</i> <br /><br />
-            </li>
+                <Player player={player} key={index}/> 
             );
         });
+
 
 
 
@@ -115,40 +173,8 @@ if (this.state.filter){
             </ul>
         );
     }
-
-    search(category, position, e) {
-        e.preventDefault();
-        if (this.input.value.trim() === '') {
-            return;
-        }
-        this.setState({
-            filter: this.input.value
-        }) 
-    }
-
-    reset(){
-        this.input.value = '';
-        this.setState({
-            filter: ''
-        }) 
-    }
-
-sort(e){
-
-    this.setState({
-        sort: ''
-    })
-
-    if (e.target.value){
-    }
-
-
-    this.setState({
-        sort: e.target.value
-    })
-}
-
-
+    
+   
 
     render() {
 

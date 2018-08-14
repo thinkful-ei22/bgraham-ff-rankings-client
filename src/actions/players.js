@@ -1,6 +1,6 @@
 import { API_BASE_URL } from '../config';
 
-export const fetchPlayers = (category, position, sortBy) => dispatch =>
+export const fetchPlayers = (category, position) => dispatch =>
 {
   dispatch(fetchPlayersRequest());
 
