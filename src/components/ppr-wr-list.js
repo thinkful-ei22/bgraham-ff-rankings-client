@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
 import './playerList.css';
+import './float-grid.css';
 import PlayerSearch from './player-search';
 export class PlayersList extends React.Component{
     
@@ -28,12 +29,29 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="header-bar">
-        <h1>Wide Receivers (PPR Scoring)</h1>
+
+
+<div className ="row">
+
+<div className="col-12">
+        <h1 className="sub-header">Wide Receivers (PPR Scoring)</h1>
+        </div>
+        </div>
+
+        <nav className="header-nav">
+
+<div className ="row">
+
+<div className="col-6">
+<div className="scoring">
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
 
-<nav className="header-nav">
-<br />
+        </div>
+        </div>
+        <br />
+
+         <div className="col-6">
+        <div className="Links">
         <Link to='/ppr/ovrall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/ppr/rb'> RB </Link>|
@@ -41,8 +59,10 @@ export class PlayersList extends React.Component{
         <Link to='/ppr/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
+        </div>
+</div>
+</div>
 </nav>
-            </div>
             <PlayerSearch category="ppr" position="wr"/>
 
         </div>

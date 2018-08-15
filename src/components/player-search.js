@@ -2,10 +2,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-import {fetchUpdatedPlayers} from '../actions/update-players';
 import Player from './player';
 import './playerList.css';
-
+import './float-grid.css';
 export class PlayerSearch extends React.Component {
    constructor(props){
    super(props);
@@ -73,7 +72,6 @@ update(e){
 let filteredPlayers = this.props.players;
 
 
-let expandedClass =this.state.expandClass;
 
 if (this.state.filter){
 

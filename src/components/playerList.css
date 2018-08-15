@@ -1,9 +1,23 @@
+.header-bar, .sub-header{
+    text-align: center;
+}
+
+.scoring {
+    position: relative;
+    left: 36%;
+
+}
+.Links{
+    position: relative;
+    height: 18px;
+    bottom: 18px;
+    left: 36%;
+}
+
 .playerList {
     list-style: none;
 }
-#user-rank-edit-form {
-    /* display: none; */
-}
+
 .submit-user-ranking{
     display: none;
 }
@@ -14,4 +28,3 @@ ul {
 .expanded-view{
     display: none;
 }
- 

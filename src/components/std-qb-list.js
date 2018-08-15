@@ -19,7 +19,7 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="header-bar">
+<div className="sub-header">
         <h1>Quarter Backs</h1>
 
                 <nav className="header-nav">

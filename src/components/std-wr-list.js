@@ -48,10 +48,6 @@ export class PlayersList extends React.Component{
         <Link to='/dst'> DST</Link> 
 </nav>
 <br />
-
-{/* <button name="edit-user-rank" className="edit-user-ranking" onClick = {e => this.onClick(e)}>Edit User Rank </button> */}
-{/* <button className="submit-user-ranking">Submit User Rank </button> */}
-
             </div>
             <PlayerSearch category="std" position="wr"/>
 

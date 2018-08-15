@@ -88,19 +88,17 @@ else if (this.props.player.Position === 'DST'){
 
         return(
         <li>
-        <button onClick= {(e) =>this.toggleExpanded(e)}>
          {this.props.player.Name}({this.props.player.Team}) 
-        - {this.props.player.Position} - <i>User Ranking: <input type="number" placeholder={this.props.player.UserRank} /></i> 
-        - <i>Expert Ranking: {this.props.player.Rank}</i>
+        - {this.props.player.Position} - <i>Expert Ranking: {this.props.player.Rank} </i>
  
- 
+        <button onClick= {(e) =>this.toggleExpanded(e)}> Details </button>
+
         <div className={this.state.isExpanded ? 'details expand' : 'details'} >
         
         Projections:
 
          {projectionString}             
          </div>
-         </button> 
          <br /><br />
          </li>
 

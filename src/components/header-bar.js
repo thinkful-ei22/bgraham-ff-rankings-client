@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import './playerList.css';
+import './float-grid.css';
 //import {clearAuth} from '../actions/auth';
 //import {clearAuthToken} from '../local-storage';
 
@@ -24,9 +26,13 @@ export function HeaderBar(props) {
 
 
         return (
-            <div className="header-bar">
+            <header role="banner">
+            <div className="row">
+            <div className="col-12 header-bar">
         <h1>FF Draft Rankings</h1>
+        </div>
             </div>
+            </header>
         );
     }
 

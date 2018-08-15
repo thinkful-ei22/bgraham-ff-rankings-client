@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
 import './playerList.css';
+import './float-grid.css';
 import PlayerSearch from './player-search';
 
 export class PlayersList extends React.Component{
@@ -27,13 +28,31 @@ export class PlayersList extends React.Component{
          position = typeof position === 'undefined' ? 'overall' : position
 
         return (
-           <div> 
-<div className="header-bar">
-        <h1>Running Backs (PPR Scoring)</h1>
-        Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
+            <div>
+            <div className ="row">
 
-<nav className="header-nav">
-<br />
+            <div className="col-12">
+
+        <h1 className="sub-header">Running Backs (PPR Scoring)</h1>
+        </div>
+        </div>
+  <nav className="header-nav">
+<div className="row">
+        <div className="col-12">
+       <div className="scoring">
+        Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
+        </div>
+        </div>
+        </div>
+        <br />
+        <br />
+
+
+        <div className ="row">
+
+ <div className="col-12">
+        <div className="Links">
+
         <Link to='/ppr/overall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <b> RB </b>|
@@ -41,9 +60,12 @@ export class PlayersList extends React.Component{
         <Link to='/ppr/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
+</div>
+</div>
+</div>
 </nav>
+
 <PlayerSearch category="ppr" position="rb"/>
-            </div>
         </div>
         );
     }

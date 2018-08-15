@@ -27,7 +27,7 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="header-bar">
+<div className="sub-header">
         <h1>Running Backs (Standard Scoring)</h1>
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>PPR</Link> 
 

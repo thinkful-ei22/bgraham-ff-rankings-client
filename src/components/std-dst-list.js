@@ -3,6 +3,8 @@ import {connect} from 'react-redux';
 import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
 import './playerList.css';
+import './float-grid.css';
+
 import PlayerSearch from './player-search';
 
 export class PlayersList extends React.Component{
@@ -20,10 +22,17 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="header-bar">
-        <h1>Defense/Special Teams</h1>
+<div className ="row">
 
+<div className="col-12">
+        <h1 className="sub-header">Defense/Special Teams</h1>
+        </div>
+        </div>
         <nav className="header-nav">
+
+                <div className ="row">
+                <div className="col-12">
+        <div className="Links-12">
 <br />
         <Link to='/std/overall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
@@ -32,8 +41,10 @@ export class PlayersList extends React.Component{
         <Link to='/std/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <b> DST</b> 
+        </div>
+        </div>
+</div>
 </nav>
-            </div>
             <PlayerSearch position="dst"/>
 
         </div>
