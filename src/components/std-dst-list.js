@@ -24,16 +24,14 @@ export class PlayersList extends React.Component{
            <div> 
 <div className ="row">
 
-<div className="col-12">
+<div className="col-xl">
         <h1 className="sub-header">Defense/Special Teams</h1>
         </div>
         </div>
         <nav className="header-nav">
 
                 <div className ="row">
-                <div className="col-12">
-        <div className="Links-12">
-<br />
+                <div className="col col-centered">
         <Link to='/std/overall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
@@ -41,7 +39,6 @@ export class PlayersList extends React.Component{
         <Link to='/std/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <b> DST</b> 
-        </div>
         </div>
 </div>
 </nav>

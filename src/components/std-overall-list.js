@@ -28,12 +28,24 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="sub-header">
-        <h1>Overall (Standard Scoring)</h1>
+               <div className ="row">
+
+<div className="col-xl">
+        <h1 className="sub-header">Overall (Standard Scoring)</h1>
+        </div>
+        </div>
+
+ <nav className="header-nav">
+
+<div className ="row">
+
+<div className="col col-centered">
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>PPR</Link> 
-           
-        <nav className="header-nav">
-<br />
+        </div>
+        </div>
+    
+        <div className ="row">
+        <div className="col col-centered">
         <b>OVR </b> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
@@ -41,9 +53,9 @@ export class PlayersList extends React.Component{
         <Link to='/std/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
+        </div>
+</div>
 </nav>
-           
-            </div>
 
        <PlayerSearch category="std" position="overall"/>
 

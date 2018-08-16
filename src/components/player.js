@@ -1,21 +1,34 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './player.css';
+import './float-grid.css';
 
 export class Player extends React.Component{
 constructor(props){
     super(props);
     this.state ={
-        isExpanded: false
+        isExpanded: false,
+        expandButton: 'Expand'
     }
 }
 
 toggleExpanded(e){
-    console.log('button clicked');
 
-    this.setState({isExpanded: !this.state.isExpanded})
+if (this.state.expandButton === 'Expand'){
+    this.setState({
+        isExpanded: true,
+        expandButton: 'Collapse'
+    })
     
-    console.log(this.state.isExpanded);
+}
+
+else {
+    this.setState({
+        isExpanded: false,
+        expandButton: 'Expand'
+    })
+}
+   
 }
 
     
@@ -23,84 +36,175 @@ toggleExpanded(e){
 let projectionString;
 if (this.props.player.Position === 'QB'){
     projectionString = 
-    <ul>
-     <li>Passing Yards: {this.props.player.PassingYards}</li>
-    <li>Passing Touchdowns: {this.props.player.PassingTouchdowns}</li>
-    <li>Passing Interceptions: {this.props.player.PassingInterceptions}</li>
-    <li>Rushing Yards: {this.props.player.RushingYards}</li>
-    <li>Rushing Touchdowns: {this.props.player.RushingTouchdowns}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-</ul>
+    <div>
+    <div className="row">
+     <div className="col-sm">Passing Yards: {this.props.player.PassingYards}</div>
+     </div>
+     <div className="row">
+    <div className="col-sm">Passing Touchdowns: {this.props.player.PassingTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Passing Interceptions: {this.props.player.PassingInterceptions}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Rushing Yards: {this.props.player.RushingYards}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Rushing Touchdowns: {this.props.player.RushingTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+    </div>
+</div>
 }
 else if (this.props.player.Position === 'RB'){
     projectionString = 
-    <ul>
-    <li>Rushing Yards: {this.props.player.RushingYards}</li>
-    <li>Rushing Touchdowns: {this.props.player.RushingTouchdowns}</li>
-    <li>Receptions: {this.props.player.Receptions}</li>
-    <li>Receiving Yards: {this.props.player.ReceivingYards}</li>
-    <li>Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-</ul>
+    <div>
+    <div className="row">
+    <div className="col-sm">Rushing Yards: {this.props.player.RushingYards}</div>
+    </div>
+        <div className="row">
+
+    <div className="col-sm">Rushing Touchdowns: {this.props.player.RushingTouchdowns}</div>
+    </div>
+        <div className="row">
+
+    <div className="col-sm">Receptions: {this.props.player.Receptions}</div>
+    </div>
+        <div className="row">
+
+    <div className="col-sm">Receiving Yards: {this.props.player.ReceivingYards}</div>
+    </div>
+        <div className="row">
+
+    <div className="col-sm">Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+</div>
+</div>
 }
 else if (this.props.player.Position === 'WR'){
     projectionString = 
-    <ul>
-    <li>Receptions: {this.props.player.Receptions}</li>
-    <li>Receiving Yards: {this.props.player.ReceivingYards}</li>
-    <li>Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-    </ul>
+    <div>
+    <div className="row">
+    <div className="col-sm">Receptions: {this.props.player.Receptions}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Receiving Yards: {this.props.player.ReceivingYards}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+    </div>
+    </div>
 }
 else if (this.props.player.Position === 'TE'){
     projectionString = 
-    <ul>
-    <li>Receptions: {this.props.player.Receptions}</li>
-    <li>Receiving Yards: {this.props.player.ReceivingYards}</li>
-    <li>Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-    </ul>
+    <div>
+         <div className="row">
+    <div className="col-sm">Receptions: {this.props.player.Receptions}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Receiving Yards: {this.props.player.ReceivingYards}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Receiving Touchdowns: {this.props.player.ReceivingTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+    </div>
+    </div>
+   
 }
 else if (this.props.player.Position === 'K'){
     projectionString = 
-    <ul>
-    <li>Field Goals Made: {this.props.player.FieldGoalsMade}</li>
-    <li>Field Goals Attempted: {this.props.player.FieldGoalsAttempted}</li>
-    <li>Field Goal Percentage: {this.props.player.FieldGoalPercentage}%</li>
-    <li>Extra Points Made: {this.props.player.ExtraPointsMade}</li>
-    <li>Extra Points Attempted: {this.props.player.ExtraPointsAttempted}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-</ul>
+    <div>
+    <div className="row">
+    <div className="col-sm">Field Goals Made: {this.props.player.FieldGoalsMade}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Field Goals Attempted: {this.props.player.FieldGoalsAttempted}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Field Goal Percentage: {this.props.player.FieldGoalPercentage}%</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Extra Points Made: {this.props.player.ExtraPointsMade}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Extra Points Attempted: {this.props.player.ExtraPointsAttempted}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+</div>
+</div>
 }
 else if (this.props.player.Position === 'DST'){
     projectionString = 
-    <ul>
-    <li>Sacks: {this.props.player.Sacks}</li>
-    <li>QB Hits: {this.props.player.QuarterBackHits}</li>
-    <li>Interceptions: {this.props.player.Interceptions}</li>
-    <li>Fumbles Recovered: {this.props.player.FumblesRecovered}</li>
-    <li>Safeties: {this.props.player.Safeties}</li>
-    <li>Defensive Touchdowns: {this.props.player.DefensiveTouchdowns}</li>
-    <li>Special Teams Touchdowns: {this.props.player.SpecialTeamsTouchdowns}</li>
-    <li>Fantasy Points: {this.props.player.FantasyPoints}</li>
-</ul>
+    <div>
+    <div className="row">
+    <div className="col-sm">Sacks: {this.props.player.Sacks}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">QB Hits: {this.props.player.QuarterBackHits}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Interceptions: {this.props.player.Interceptions}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fumbles Recovered: {this.props.player.FumblesRecovered}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Safeties: {this.props.player.Safeties}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Defensive Touchdowns: {this.props.player.DefensiveTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Special Teams Touchdowns: {this.props.player.SpecialTeamsTouchdowns}</div>
+    </div>
+    <div className="row">
+    <div className="col-sm">Fantasy Points: {this.props.player.FantasyPoints}</div>
+</div>
+</div>
 }
 
         return(
-        <li>
-         {this.props.player.Name}({this.props.player.Team}) 
-        - {this.props.player.Position} - <i>Expert Ranking: {this.props.player.Rank} </i>
- 
-        <button onClick= {(e) =>this.toggleExpanded(e)}> Details </button>
+            <tr>
+         <td >
+         {this.props.player.Name} 
+         <div id ="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >
+         <img src={this.props.player.Profile} className="Profile" alt="Player-Profile" />
 
-        <div className={this.state.isExpanded ? 'details expand' : 'details'} >
+        </div> 
+         </td>
+         <td >{this.props.player.Team}</td> 
+         <td >{this.props.player.Position}</td> 
+         <td >{this.props.player.Rank}</td>
+         <td>
+         <button onClick= {(e) =>this.toggleExpanded(e)}> {this.state.expandButton} </button>
+       
+         <tr>
+
+         </tr>
+         <div id="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >
         
-        Projections:
+        <u>Season Projections</u>
 
          {projectionString}             
          </div>
+         </td>
+
+
+        
          <br /><br />
-         </li>
+
+
+
+         </tr> 
 
         );
     }

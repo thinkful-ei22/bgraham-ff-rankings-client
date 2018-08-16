@@ -35,7 +35,7 @@ export class PlayersList extends React.Component{
            <div> 
 <div className ="row">
 
-<div className="col-12">
+<div className="col-xl">
         <h1 className="sub-header">Tight Ends (PPR Scoring)</h1>
 
         </div>
@@ -45,16 +45,13 @@ export class PlayersList extends React.Component{
 
 <div className ="row">
 
-<div className="col-6">
-<div className="scoring">
+<div className="col col-centered">
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
         </div>
         </div>
-<br />
-
-
-        <div className="col-6">
-        <div className="Links">
+       
+        <div className ="row">
+        <div className="col col-centered">
         <Link to='/ppr/overall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/ppr/rb'> RB </Link>|
@@ -62,7 +59,6 @@ export class PlayersList extends React.Component{
         <b> TE </b>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
-        </div>
 </div>
 </div>
 </nav>

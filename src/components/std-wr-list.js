@@ -38,7 +38,6 @@ export class PlayersList extends React.Component{
 
 
         <nav className="header-nav">
-<br />
         <Link to='/std/overall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
@@ -47,7 +46,7 @@ export class PlayersList extends React.Component{
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
 </nav>
-<br />
+
             </div>
             <PlayerSearch category="std" position="wr"/>
 

@@ -26,11 +26,10 @@ export class PlayersList extends React.Component{
          position = typeof position === 'undefined' ? 'overall' : position
 
         return (
-           <div> 
-
+<div>
 <div className ="row">
 
-<div className="col-12">
+<div className="col-xl">
 
         <h1 className="sub-header">Overall (PPR Scoring)</h1>
         </div>
@@ -40,18 +39,13 @@ export class PlayersList extends React.Component{
 
         <div className ="row">
 
-<div className="col-12">
-<div className="scoring">
+<div className="col col-centered">
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
         </div>
         </div>
-        </div>
-        <br />
-        <br />
-<div className="row">
-
-        <div className="col-12">
-        <div className="Links">
+    
+        <div className ="row">
+        <div className="col col-centered">
         <b>OVR </b> |
         <Link to='/qb'> QB </Link>|
         <Link to='/ppr/rb'> RB </Link>|
@@ -59,7 +53,6 @@ export class PlayersList extends React.Component{
         <Link to='/ppr/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
-</div>
 </div>
 </div>
 </nav>

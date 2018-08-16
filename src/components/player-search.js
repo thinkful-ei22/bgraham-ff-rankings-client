@@ -138,27 +138,12 @@ if (this.state.filter){
                 return b.Rank-a.Rank;
             });
         }
-
-        if (this.state.sort === 'UserRankAsc'){
-            filteredPlayers = filteredPlayers.sort(function (a,b) {
-                return a.UserRank-b.UserRank;
-            });
         }
-        if (this.state.sort === 'UserRankDesc'){
-            filteredPlayers = filteredPlayers.sort(function (a,b) {
-                return b.UserRank-a.UserRank;
-            });
-        }
-
-
-        }
-
-      
-
         const playersListString = filteredPlayers.map((player,index) => {
 
             return(
-                <Player player={player} key={index}/> 
+                <Player player={player} key={index} />
+                
             );
         });
 
@@ -166,9 +151,18 @@ if (this.state.filter){
 
 
         return (
-            <ul className="players-search-results">
-                {playersListString}
-            </ul>
+            <table className="table table-striped">
+            <thead>
+            <tr >
+                <th scope="col">Name</th>
+                <th scope="col">Team</th>
+                <th scope="col">Position</th>
+                <th scope="col">Expert Ranking</th>
+                <th scope="col">Details</th>
+            </tr>
+            </thead>
+            <tbody>{playersListString}</tbody>
+            </table>
         );
     }
     
@@ -177,25 +171,25 @@ if (this.state.filter){
     render() {
 
         return (
-            <div className="player-search-and-sort">
-                <form onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
-                    <input type="search" ref={input => this.input = input} />
-                    <button>Search</button>
-                    <button onClick= {(e) => this.reset(e)}>Reset</button>
-                </form>
-               Sort By: <select className="sort-by" value={this.state.sort} onChange={(e) => this.sort(e)}>
-                    <option >----------</option>
+            <div>
+            <div className="row">
+            <div className="col col-centered">
+            <select value={this.state.sort} onChange={(e) => this.sort(e)}>
+                    <option >Sort By:</option>
                     <option value="NameAsc">Name (A-Z)</option>
                     <option value="NameDesc">Name (Z-A)</option>
                     <option value="ExpRankAsc">Expert Rank (1-{this.props.players.length})</option>
                     <option value="ExpRankDesc">Expert Rank ({this.props.players.length}-1)</option>
-                    <option value="UserRankAsc">User Rank (1-{this.props.players.length})</option>
-                    <option value="UserRankDesc">User Rank ({this.props.players.length}-1)</option>
-
                 </select>
-                <ul className="player-search-results">
+                </div>
+                 <form className="col-md" onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
+                    <input type="search" ref={input => this.input = input}  placeholder="Player Search..." />
+                    <button>Search</button>
+                    <button onClick= {(e) => this.reset(e)}>Reset</button>
+                </form>
+                <br />
+                </div>
                     {this.renderResults()}
-                </ul>
             </div>
         );
     }

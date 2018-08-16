@@ -21,7 +21,9 @@ import DstList from './std-dst-list';
 import HeaderBar from './header-bar';
 
 const Main = () => (
-    <main>
+  <div className="container"> 
+
+    
     <Route path='/' component={HeaderBar}/>
       <Switch>
       <Route path='/qb' component={QbList}/>
@@ -46,7 +48,7 @@ const Main = () => (
         </Route>
 
       </Switch>
-    </main>
+    </div>
   )
 
   export default Main

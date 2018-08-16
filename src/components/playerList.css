@@ -28,3 +28,26 @@ ul {
 .expanded-view{
     display: none;
 }
+.player-search-label{
+    position: relative;
+
+}
+.player-search{
+    position: relative;
+    bottom: 20px;
+    left: 23%;
+}
+
+.sort-by{
+    position: relative;
+    left: 23%;
+
+}
+
+.player-list-table{
+    position: relative;
+    width: 100%;
+}
+thead{
+    text-align: center;
+}

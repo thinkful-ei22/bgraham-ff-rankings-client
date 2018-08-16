@@ -1,7 +1,31 @@
-.details {
-    display: none;
+td{
+    text-align: center;
+    border: 3px solid;
+    border-color: black;
+
+}
+#details {
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: transform 400ms ease-in;
+    height: 1px;
 }
 
-.details.expand {
-    display: block;
-}
+#details.slideIn {
+visibility: visible;    
+transform: translateY(0px);
+height: 250px;
+
+  }
+  #details.slideOut {
+    visibility: hidden;
+    transform: translateY(-20px);
+    height: 1 px;
+
+  }
+
+  .Profile{
+      position: relative;
+      width: 250px;
+      height: 250px;
+  }

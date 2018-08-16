@@ -33,7 +33,7 @@ export class PlayersList extends React.Component{
 
 <div className ="row">
 
-<div className="col-12">
+<div className="col-xl">
         <h1 className="sub-header">Wide Receivers (PPR Scoring)</h1>
         </div>
         </div>
@@ -42,16 +42,14 @@ export class PlayersList extends React.Component{
 
 <div className ="row">
 
-<div className="col-6">
-<div className="scoring">
+<div className="col col-centered">
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
-
         </div>
         </div>
-        <br />
+    
+        <div className ="row">
 
-         <div className="col-6">
-        <div className="Links">
+         <div className="col col-centered">
         <Link to='/ppr/ovrall'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/ppr/rb'> RB </Link>|
@@ -59,7 +57,6 @@ export class PlayersList extends React.Component{
         <Link to='/ppr/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
-        </div>
 </div>
 </div>
 </nav>

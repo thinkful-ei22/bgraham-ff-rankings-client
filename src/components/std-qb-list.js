@@ -19,11 +19,19 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
-<div className="sub-header">
-        <h1>Quarter Backs</h1>
+               <div className ="row">
+
+<div className="col-12">
+        <h1 className="sub-header">Quarter Backs</h1>
+        </div>
+        </div>
+        <br />
 
                 <nav className="header-nav">
-<br />
+                <div className ="row">
+                <div className="col-12">
+                <div className="Links">
+
         <Link to='/std/overall'>OVR </Link> |
         <b> QB </b>|
         <Link to='/std/rb'> RB </Link>|
@@ -31,9 +39,10 @@ export class PlayersList extends React.Component{
         <Link to='/std/te'> TE </Link>|
         <Link to='/k'> K </Link>|
         <Link to='/dst'> DST</Link> 
+        </div>
+        </div>
+</div>
 </nav>
-
-            </div>
             <PlayerSearch position="qb"/>
 
         </div>
