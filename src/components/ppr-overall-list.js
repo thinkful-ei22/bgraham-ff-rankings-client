@@ -63,7 +63,6 @@ export class PlayersList extends React.Component{
 }
 
 const mapStateToProps = state => {
-    console.log('state', state);
     return {
         players: state.players.players,
         loading: state.players.loading,

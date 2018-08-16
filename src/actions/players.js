@@ -1,7 +1,9 @@
 import { API_BASE_URL } from '../config';
 
+export const FETCH_PLAYERS = 'FETCH_PLAYERS';
 export const fetchPlayers = (category, position) => dispatch =>
 {
+    
   dispatch(fetchPlayersRequest());
 
     const serverURL = `${API_BASE_URL}/${category}/${position}`;
@@ -30,7 +32,6 @@ export const fetchPlayers = (category, position) => dispatch =>
     
     
 }
-
 
 export const FETCH_PLAYERS_REQUEST = 'FETCH_PLAYERS_REQUEST';
 export const fetchPlayersRequest = () => ({

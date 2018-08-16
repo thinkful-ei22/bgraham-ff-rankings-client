@@ -10,7 +10,7 @@ const initialState = {
     error: null
 };
 
-export default function searchReducer(state=initialState, action) {
+export const searchReducer = (state=initialState, action) => {
     switch (action.type) {
         case SEARCH_PLAYERS_REQUEST:
         return Object.assign({}, state, {
