@@ -14,3 +14,7 @@
   <br>
   <img src="https://github.com/thinkful-ei22/bgraham-ff-rankings-client/blob/master/public/FF-App%20Wirefame.png" alt="App-Wireframe">
 </h1>
+
+Love Fantasy Football? Need a guide to draft with? Then this is the app for you! Introudcing LowerReact's Fantasy Football Draft App! 
+
+This app is a comprehensive list of players in the NFL ranked in order to give you a better idea on who to draft when your turn comes. Usable for both Standard and PPR (Points-Per-Reception) leagues, this app allows you to search a player by name and sort by the players' name (A-Z and Z-A) and ranking (1-X and X-1).
