@@ -156,10 +156,10 @@ if (this.state.filter){
             <thead>
             <tr >
                 <th scope="col">Name</th>
-                <th scope="col">Expert Ranking</th>
-                <th scope="col">Team</th>
+                <th scope="col">Ranking</th>
+                <th scope="col" className="non-mobile">Team</th>
                 <th scope="col">Position</th>
-                <th scope="col">Details</th>
+                <th scope="col" className="non-mobile">Details</th>
             </tr>
             </thead>
             <tbody>{playersListString}</tbody>
@@ -180,12 +180,12 @@ if (this.state.filter){
                     <option >Sort By:</option>
                     <option value="NameAsc">Name (A-Z)</option>
                     <option value="NameDesc">Name (Z-A)</option>
-                    <option value="ExpRankAsc">Expert Rank (1-{this.props.players.length})</option>
-                    <option value="ExpRankDesc">Expert Rank ({this.props.players.length}-1)</option>
+                    <option value="ExpRankAsc">Rank (1-{this.props.players.length})</option>
+                    <option value="ExpRankDesc">Rank ({this.props.players.length}-1)</option>
                 </select>
                 </div>
                  <form className="col-md-6 col-centered" onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
-                    <input type="search" ref={input => this.input = input}  placeholder="Player Search..." />
+                    <input type="search" className="player-search" ref={input => this.input = input}  placeholder="Player Search..." />
                     <button>Search</button>
                     <button onClick= {(e) => this.reset(e)}>Reset</button>
                 </form>

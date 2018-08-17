@@ -26,6 +26,17 @@ height: 250px;
 
   .Profile{
       position: relative;
-      width: 250px;
-      height: 250px;
+      width: 200px;
+      height: 200px;
   }
+
+  
+  @media only screen and (max-width: 768px) {
+    .non-mobile{
+    
+        display: none;
+    }
+    .Profile{
+      display: none;
+    }
+    } 

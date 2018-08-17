@@ -21,6 +21,10 @@
 .submit-user-ranking{
     display: none;
 }
+.player-search{
+    position: relative;
+    width: 130px;
+}  
 
 ul {
     list-style: none;
@@ -32,10 +36,7 @@ ul {
     position: relative;
 
 }
-.player-search{
-    position: relative;
-    bottom: 20px;
-}
+
 
 .sort-by{
     position: relative;
@@ -59,9 +60,22 @@ thead{
     text-align: center;
 }
 
+.rank{
+    position: relative;
+    width: 10px;
+}
+
 .table-responsive {
     overflow: hidden;
 }
-/* @media only screen and (min-width: 768px) {
 
-} */
+@media only screen and (max-width: 768px) {
+    .non-mobile{
+    
+        display: none;
+    }
+    .player-search{
+        position: relative;
+        width: 130px;
+    }   
+}

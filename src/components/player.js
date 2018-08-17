@@ -184,10 +184,10 @@ else if (this.props.player.Position === 'DST'){
 
         </div> 
          </td>
-         <td >{this.props.player.Rank}</td>
-         <td >{this.props.player.Team}</td> 
+         <td className="rank" >{this.props.player.Rank}</td>
+         <td className="non-mobile">{this.props.player.Team}</td> 
             <td >{this.props.player.Position}</td> 
-            <td>
+            <td className="non-mobile">
             <button onClick= {(e) =>this.toggleExpanded(e)}> {this.state.expandButton} </button>
             
          <div id="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >

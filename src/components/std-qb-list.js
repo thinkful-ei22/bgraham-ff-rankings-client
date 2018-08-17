@@ -30,13 +30,12 @@ export class PlayersList extends React.Component{
         <h1 className="sub-header">Quarter Backs</h1>
         </div>
         </div>
-        <br />
 
                 <nav className="header-nav">
-                <div className ="row">
-                <div className="col-12">
-                <div className="Links">
+               
 
+<div className ="row">
+        <div className="col col-centered">
         <Link to='/'>OVR </Link> |
         <b> QB </b>|
         <Link to='/std/rb'> RB </Link>|
@@ -46,7 +45,7 @@ export class PlayersList extends React.Component{
         <Link to='/dst'> DST</Link> 
         </div>
         </div>
-</div>
+
 </nav>
             <PlayerSearch position="qb"/>
 <ScrollUpButton />
