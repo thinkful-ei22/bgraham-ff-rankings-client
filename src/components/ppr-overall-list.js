@@ -59,6 +59,7 @@ export class PlayersList extends React.Component{
 </div>
 </nav>
 <PlayerSearch category="ppr" position="overall"/> 
+<ScrollUpButton />
         </div>
         );
     }

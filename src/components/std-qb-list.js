@@ -4,6 +4,7 @@ import {fetchPlayers} from '../actions/players';
 import {Link} from 'react-router-dom';
 import './playerList.css';
 import PlayerSearch from './player-search';
+import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 export class PlayersList extends React.Component{
     
    
@@ -44,7 +45,7 @@ export class PlayersList extends React.Component{
 </div>
 </nav>
             <PlayerSearch position="qb"/>
-
+<ScrollUpButton />
         </div>
         );
     }
