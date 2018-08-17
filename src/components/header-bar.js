@@ -9,7 +9,7 @@ export function HeaderBar(props) {
             <header role="banner">
             <div className="row">
             <div className="col-12">
-        <h1 className="header-bar">Fantasy Football Draft Rankings</h1>
+        <h1 className="header-bar">LowerReact's Fantasy Football Draft Rankings</h1>
         </div>
             </div>
             </header>
