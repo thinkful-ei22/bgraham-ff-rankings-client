@@ -4,7 +4,7 @@ import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
 import Player from './player';
 import './playerList.css';
-import './float-grid.css';
+// import './float-grid.css';
 export class PlayerSearch extends React.Component {
    constructor(props){
    super(props);
@@ -151,18 +151,20 @@ if (this.state.filter){
 
 
         return (
-            <table className="table table-striped">
+            <div className="table-responsive">
+             <table className="table table-striped">
             <thead>
             <tr >
                 <th scope="col">Name</th>
+                <th scope="col">Expert Ranking</th>
                 <th scope="col">Team</th>
                 <th scope="col">Position</th>
-                <th scope="col">Expert Ranking</th>
                 <th scope="col">Details</th>
             </tr>
             </thead>
             <tbody>{playersListString}</tbody>
             </table>
+            </div>
         );
     }
     
@@ -173,7 +175,7 @@ if (this.state.filter){
         return (
             <div>
             <div className="row">
-            <div className="col col-centered">
+            <div className="col-md-6 col-centered">
             <select value={this.state.sort} onChange={(e) => this.sort(e)}>
                     <option >Sort By:</option>
                     <option value="NameAsc">Name (A-Z)</option>
@@ -182,7 +184,7 @@ if (this.state.filter){
                     <option value="ExpRankDesc">Expert Rank ({this.props.players.length}-1)</option>
                 </select>
                 </div>
-                 <form className="col-md" onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
+                 <form className="col-md-6 col-centered" onSubmit={(e) => this.search(this.props.category, this.props.position, e)}>
                     <input type="search" ref={input => this.input = input}  placeholder="Player Search..." />
                     <button>Search</button>
                     <button onClick= {(e) => this.reset(e)}>Reset</button>

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import './player.css';
-import './float-grid.css';
+// import './float-grid.css';
 
 export class Player extends React.Component{
 constructor(props){
@@ -172,6 +172,9 @@ else if (this.props.player.Position === 'DST'){
 </div>
 }
 
+
+
+
         return(
             <tr>
          <td >
@@ -181,12 +184,12 @@ else if (this.props.player.Position === 'DST'){
 
         </div> 
          </td>
-         <td >{this.props.player.Team}</td> 
-         <td >{this.props.player.Position}</td> 
          <td >{this.props.player.Rank}</td>
-         <td>
-         <button onClick= {(e) =>this.toggleExpanded(e)}> {this.state.expandButton} </button>
-    
+         <td >{this.props.player.Team}</td> 
+            <td >{this.props.player.Position}</td> 
+            <td>
+            <button onClick= {(e) =>this.toggleExpanded(e)}> {this.state.expandButton} </button>
+            
          <div id="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >
         
         <u>Season Projections</u>
@@ -194,6 +197,8 @@ else if (this.props.player.Position === 'DST'){
          {projectionString}             
          </div>
          </td>
+         
+    
 
 
          </tr> 

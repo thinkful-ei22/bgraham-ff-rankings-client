@@ -35,7 +35,6 @@ ul {
 .player-search{
     position: relative;
     bottom: 20px;
-    left: 23%;
 }
 
 .sort-by{
@@ -46,8 +45,21 @@ ul {
 
 .player-list-table{
     position: relative;
-    width: 100%;
 }
 thead{
     text-align: center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+.table-responsive {
+    overflow: hidden;
+}
 }
