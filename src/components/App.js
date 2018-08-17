@@ -23,7 +23,6 @@ export class App extends React.Component {
 
         clearInterval(this.refreshInterval);
     }
-    //<Route exact path="/" component={LandingPage} />
 
     render() {
         return (
