@@ -38,7 +38,7 @@ export class PlayersList extends React.Component{
         Switch Scoring System to: <Link to={`${scoring}/${position}`}>PPR</Link> 
 
         <nav className="header-nav">
-        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
         <Link to='/std/wr'> WR </Link>|

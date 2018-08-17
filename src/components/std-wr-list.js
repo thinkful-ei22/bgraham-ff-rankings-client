@@ -43,7 +43,7 @@ export class PlayersList extends React.Component{
 
 
         <nav className="header-nav">
-        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
         <b> WR </b>|

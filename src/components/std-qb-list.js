@@ -37,7 +37,7 @@ export class PlayersList extends React.Component{
                 <div className="col-12">
                 <div className="Links">
 
-        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/'>OVR </Link> |
         <b> QB </b>|
         <Link to='/std/rb'> RB </Link>|
         <Link to='/std/wr'> WR </Link>|

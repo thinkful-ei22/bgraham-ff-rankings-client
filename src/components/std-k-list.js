@@ -34,7 +34,7 @@ export class PlayersList extends React.Component{
 
         <div className ="row">
                 <div className="col col-centered">
-        <Link to='/std/overall'>OVR </Link> |
+        <Link to='/'>OVR </Link> |
         <Link to='/qb'> QB </Link>|
         <Link to='/std/rb'> RB </Link>|
         <Link to='/std/wr'> WR </Link>|

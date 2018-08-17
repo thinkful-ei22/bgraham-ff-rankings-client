@@ -20,13 +20,7 @@ export class PlayersList extends React.Component{
 
     render(){
 
-        let scoring = this.props.location.pathname.includes('/std') ? '/ppr' : '/std'
-
-        scoring = this.props.location.pathname === '/' ? '/ppr' : scoring
-
-         let position= this.props.location.pathname.split('/')[2];
-
-         position = typeof position === 'undefined' ? 'overall' : position
+       
 
         return (
 <div>
@@ -44,7 +38,7 @@ export class PlayersList extends React.Component{
         <div className ="row">
 
 <div className="col col-centered">
-        Switch Scoring System to: <Link to={`${scoring}/${position}`}>Standard</Link> 
+        Switch Scoring System to: <Link to='/'>Standard</Link> 
         </div>
         </div>
     
