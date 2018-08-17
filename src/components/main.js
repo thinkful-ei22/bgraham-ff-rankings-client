@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import React from 'react';
 import StdOvrList from './std-overall-list';
 import PprOvrList from './ppr-overall-list';
@@ -24,31 +24,31 @@ const Main = () => (
   <div className="container"> 
 
     
-      <Switch>
+      {/* <Switch> */}
       <Route path='/' component={HeaderBar}/>
 
-      <Route path='/qb' component={QbList}/>
+      <Route exact path='/qb' component={QbList}/>
      
-      <Route path='/k' component={KList}/>
+      <Route  exact path='/k' component={KList}/>
      
-      <Route path='/dst' component={DstList}/>
+      <Route exact path='/dst' component={DstList}/>
 
-      <Route path='/std/rb' component={StdRbList}/>
-      <Route path='/ppr/rb' component={PprRbList}/>
+      <Route exact path='/std/rb' component={StdRbList}/>
+      <Route exact path='/ppr/rb' component={PprRbList}/>
 
-      <Route path='/std/wr' component={StdWrList}/>
-      <Route path='/ppr/wr' component={PprWrList}/>
+      <Route exact path='/std/wr' component={StdWrList}/>
+      <Route exact path='/ppr/wr' component={PprWrList}/>
 
-      <Route path='/std/te' component={StdTeList}/>
-      <Route path='/ppr/te' component={PprTeList}/>
+      <Route exact path='/std/te' component={StdTeList}/>
+      <Route exact path='/ppr/te' component={PprTeList}/>
 
-        <Route path='/ppr/overall' component={PprOvrList}/>
+        <Route exact path='/ppr/overall' component={PprOvrList}/>
 
-        <Route path='*'component={StdOvrList}>
+        <Route exact path='/std/overall'component={StdOvrList}>
        
         </Route>
 
-      </Switch>
+      {/* </Switch> */}
     </div>
   )
 
