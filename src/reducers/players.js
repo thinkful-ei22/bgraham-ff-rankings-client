@@ -10,7 +10,7 @@ import {
     error: null
   };
   
-  export  const playersReducer = (state = initialState, action) => {
+  export const  playersReducer = (state = initialState, action) => {
     switch(action.type) {
     case FETCH_PLAYERS_REQUEST:
       return Object.assign({} ,state, {
