@@ -24,8 +24,9 @@ const Main = () => (
   <div className="container"> 
 
     
-    <Route path='/' component={HeaderBar}/>
       <Switch>
+      <Route path='/' component={HeaderBar}/>
+
       <Route path='/qb' component={QbList}/>
      
       <Route path='/k' component={KList}/>
