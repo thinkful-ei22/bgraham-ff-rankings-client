@@ -1,4 +1,4 @@
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect } from 'react-router-dom'
 import {BrowserRouter as Router} from 'react-router-dom';
 
 import React from 'react';
@@ -27,7 +27,10 @@ const Main = () => (
     <Router>
 
       <Switch>
-      {/* <Route path='/' component={HeaderBar}/> */}
+      <Route exact path='/' >
+      <Redirect to="/std/overall"/>
+</Route>
+      <Route exact path='/std/overall'component={StdOvrList} />
 
       <Route exact path='/qb' component={QbList}/>
      
@@ -46,7 +49,6 @@ const Main = () => (
 
         <Route path='/ppr/overall' component={PprOvrList}/>
 
-        <Route exact path='/std/overall'component={StdOvrList} />
         </Switch>
 </Router>
     </div>
