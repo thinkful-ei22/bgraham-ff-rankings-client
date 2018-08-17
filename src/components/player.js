@@ -186,10 +186,7 @@ else if (this.props.player.Position === 'DST'){
          <td >{this.props.player.Rank}</td>
          <td>
          <button onClick= {(e) =>this.toggleExpanded(e)}> {this.state.expandButton} </button>
-       
-         <tr>
-
-         </tr>
+    
          <div id="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >
         
         <u>Season Projections</u>
@@ -197,11 +194,6 @@ else if (this.props.player.Position === 'DST'){
          {projectionString}             
          </div>
          </td>
-
-
-        
-         <br /><br />
-
 
 
          </tr> 

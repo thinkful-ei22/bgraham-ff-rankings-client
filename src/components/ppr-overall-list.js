@@ -6,6 +6,7 @@ import './playerList.css';
 import './float-grid.css';
 import PlayerSearch from './player-search';
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+import { HeaderBar } from './header-bar';
 
 export class PlayersList extends React.Component{
     
@@ -29,8 +30,9 @@ export class PlayersList extends React.Component{
 
         return (
 <div>
-<div className ="row">
+<HeaderBar />
 
+<div className ="row">
 <div className="col-xl">
 
         <h1 className="sub-header">Overall (PPR Scoring)</h1>

@@ -6,6 +6,7 @@ import './playerList.css';
 import './float-grid.css';
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 import PlayerSearch from './player-search';
+import { HeaderBar } from './header-bar';
 
 export class PlayersList extends React.Component{
     
@@ -22,6 +23,8 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
+               <HeaderBar />
+
 <div className ="row">
 
 <div className="col-xl">

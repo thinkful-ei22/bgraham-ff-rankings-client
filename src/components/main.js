@@ -1,4 +1,6 @@
-import { Route } from 'react-router-dom'
+import { Switch, Route } from 'react-router-dom'
+import {BrowserRouter as Router} from 'react-router-dom';
+
 import React from 'react';
 import StdOvrList from './std-overall-list';
 import PprOvrList from './ppr-overall-list';
@@ -18,14 +20,14 @@ import KList from './std-k-list';
 
 import DstList from './std-dst-list';
 
-import HeaderBar from './header-bar';
 
 const Main = () => (
   <div className="container"> 
 
-    
-      {/* <Switch> */}
-      <Route path='/' component={HeaderBar}/>
+    <Router>
+
+      <Switch>
+      {/* <Route path='/' component={HeaderBar}/> */}
 
       <Route exact path='/qb' component={QbList}/>
      
@@ -42,13 +44,11 @@ const Main = () => (
       <Route exact path='/std/te' component={StdTeList}/>
       <Route exact path='/ppr/te' component={PprTeList}/>
 
-        <Route exact path='/ppr/overall' component={PprOvrList}/>
+        <Route path='/ppr/overall' component={PprOvrList}/>
 
-        <Route exact path='/std/overall'component={StdOvrList}>
-       
-        </Route>
-
-      {/* </Switch> */}
+        <Route exact path='/std/overall'component={StdOvrList} />
+        </Switch>
+</Router>
     </div>
   )
 

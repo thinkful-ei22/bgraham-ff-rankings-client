@@ -5,6 +5,8 @@ import {Link} from 'react-router-dom';
 import './playerList.css';
 import PlayerSearch from './player-search';
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
+import { HeaderBar } from './header-bar';
+
 export class PlayersList extends React.Component{
     
    
@@ -20,6 +22,8 @@ export class PlayersList extends React.Component{
 
         return (
            <div> 
+               <HeaderBar />
+
                <div className ="row">
 
 <div className="col-12">
