@@ -1,6 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {withRouter} from 'react-router-dom';
 import Main from './main';
 
 export class App extends React.Component {
@@ -35,4 +33,4 @@ export class App extends React.Component {
 
 
 // Deal with update blocking - https://reacttraining.com/react-router/web/guides/dealing-with-update-blocking
-export default withRouter(connect()(App));
+export default App
