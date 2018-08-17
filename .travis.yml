@@ -1,3 +1,10 @@
 language: node_js
 node_js: node
 services: mongodb
+deploy:
+  provider: heroku
+  api_key:
+    secure: bnP6Q3TOLUVvvqpccWJLjw0SVZ5vjIgBGZI+qPzUCR2TsIM7/vo1PE5reRSTSq3RStc/B9lHe43EKb3qd3PmKFnz2M4jm7ITRLQbKd7XegM+zJh9EV6az8FZ2whAFWyzrcly57e0gGHrZ8qa9grkvd0EZ5NLtiqHR4zOc6/JTVq8RErrv+YWjAjRdEOG44RfDgqrcyOF3vWKRqPPzcCFrs3va8QmUFeFpHrDlf7xtIPExdlqNJ98gWUSrzfRgZcIDPVNYHCcpH4CYKpiUuGo/uKxFih3r9NNAl22ipNkHl8apD4swt4xCqSnG6togLbLisI0g1IMCpwy/ZjcVQuOtxOTadKFzR9mjXZmIyBNtkntPi25loPmlc+yQE2C5vUTqGKDXgqgUZjGRryNUAVrn/fv9LyyaVhcgio/ZeVNZMd4gOvbCrIUlxX1LMxGy3ELUWPvfo+4SSQ53QPA2Vt+17YUXFkaDYB6YYwhU9LVR17fqOKxChnbLSmJP3Y3LfcqnKDV+dKkbJ4q5qJa9Wpvy4Bcra6OvG0g4xo1U/eK9McMoPK84H5tqrehmrhe+gCKlNnvmcZzoXovaThZFZH1WolcsJUGujXfbwJN76mRqOvyPGCDiNrNF/JS6f83f8wz9986pM7tx1jCmPe2TR2UD2TvQpKLQUbn18n0y/DSsrQ=
+  app: fast-bastion-74960
+  on:
+    repo: thinkful-ei22/bgraham-ff-rankings-client
