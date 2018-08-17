@@ -12,8 +12,8 @@
 <h4 align="center">An app designed to display the pre-draft rankings received from <a href="https://fantasydata.com/" target="_blank">FantasyData's API</a>.</h4>
 
 
-Click <a href="https://floating-mesa-73214.herokuapp.com/" target="_blank">Here</a> for the demo!
-<h1 align="center">
+<h4 align="center">Click <a href="https://floating-mesa-73214.herokuapp.com/" target="_blank">Here</a> for the demo!
+<h1 align="center"></h4>
   <br>
   <img src="https://github.com/thinkful-ei22/bgraham-ff-rankings-client/blob/master/public/FF-App%20Wirefame.png" alt="App-Wireframe">
 </h1>
