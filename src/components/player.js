@@ -177,7 +177,7 @@ else if (this.props.player.Position === 'DST'){
 
         return(
             <tr>
-         <td >
+         <td className="name" >
          {this.props.player.Name} 
          <div id ="details" className={this.state.isExpanded ? 'slideIn' : 'slideOut'} >
          <img src={this.props.player.Profile} className="Profile" alt="Player-Profile" />

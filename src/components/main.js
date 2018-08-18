@@ -20,7 +20,8 @@ import KList from './std-k-list';
 
 import DstList from './std-dst-list';
 
-
+import About from './about';
+import Scoring from './scoring';
 const Main = () => (
   <div className="container"> 
 
@@ -29,6 +30,10 @@ const Main = () => (
       <Switch>
     
       <Route exact path='/ppr/overall' component={PprOvrList}/>
+    
+      <Route exact path='/about' component={About}/>
+
+      <Route exact path='/scoring' component={Scoring}/>
 
       <Route exact path='/qb' component={QbList}/>
      

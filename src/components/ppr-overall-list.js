@@ -7,7 +7,6 @@ import './float-grid.css';
 import PlayerSearch from './player-search';
 import ScrollUpButton from "react-scroll-up-button"; //Add this line Here
 import { HeaderBar } from './header-bar';
-
 export class PlayersList extends React.Component{
     
    
@@ -55,7 +54,8 @@ export class PlayersList extends React.Component{
 </div>
 </nav>
 <PlayerSearch category="ppr" position="overall"/> 
-<ScrollUpButton />
+<ScrollUpButton  />
+
         </div>
         );
     }

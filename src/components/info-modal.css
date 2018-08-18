@@ -1,0 +1,149 @@
+.about-overlay {
+	color: #fff;
+	width: 100%;
+	background: #e74c3c;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	z-index: 1000;
+}
+
+.scoring-overlay {
+	width: 100%;
+	color: #fff;
+	background: #180a9b;
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 0;
+	z-index: 1000;
+}
+.content {
+	color: #fff;
+	background: #3f3ce7;
+	position: relative;
+	height: auto;
+	border-radius: 3px;
+	top: 15%;
+	width: 70%;
+	margin: auto auto;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+.content.about {
+	color: #fff;
+	background: #e73c3c;
+	position: relative;
+	height: auto;
+	border-radius: 3px;
+	top: 10%;
+	margin: auto auto;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+.content h3 {
+	margin: 0;
+	padding: 0.4em;
+	text-align: center;
+	font-size: 2.4em;
+	font-weight: 300;
+	opacity: 0.8;
+	background: rgba(0,0,0,0.1);
+	border-radius: 3px 3px 0 0;
+}
+.content h5 {
+	text-align: center;
+}
+
+.content > div {
+	padding: 15px 40px 30px;
+	margin: 0;
+	font-weight: 300;
+	font-size: 1.15em;
+}
+
+.content > div p {
+	margin: 0;
+	padding: 10px 0;
+	line-height: 2em;
+	text-align: center;
+}
+
+.content > div ul {
+	margin-bottom: -30px;
+	padding: 0 0 30px 20px;
+	text-align: left;
+}
+
+.content > div ul li {
+	padding: 5px 0;
+	display: block;	
+	list-style-type: disc;
+	line-height: 1.5em;
+}
+
+.content > div ul li strong{
+	text-decoration: underline;
+}
+
+.content > div a {
+	font-size: 0.8em;
+	background: #1F253D;
+	color: #95a5a6;
+	padding: 0.5em 2em;
+	margin-bottom: 50px;
+	border-radius: 3px;
+}
+.content .close{
+position: relative;
+right: 33%;
+}
+
+.content .credits{
+	position: relative;
+	left: 37%;
+	}
+.content .espn-credits{
+		position: relative;
+		left: 41.5%;
+		}
+
+h4{
+	text-align: center;
+}
+
+
+@media only screen and (min-width: 769px) and (max-width:1366px ){
+	.content .close{
+		position: relative;
+		right: 28%;
+		}
+
+		.content .credits{
+			position: relative;
+			left: 33%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 38%;
+				}
+	
+		
+}
+@media only screen and (max-width: 768px) {
+	.content .close{
+		position: relative;
+		right: 1%;
+		bottom: 10px;
+		}
+
+		.content .credits{
+			position: relative;
+			left: 1%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 14%;
+				}
+}

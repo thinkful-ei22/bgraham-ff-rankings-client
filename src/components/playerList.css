@@ -1,6 +1,12 @@
-.header-bar, .sub-header{
+.header-bar, .sub-header, .app-tutorial, .scoring-tutorial{
     text-align: center;
 }
+.tutorial{
+position: relative;
+left: 8%;
+width: 600px;
+}
+
 
 .scoring {
     position: relative;
@@ -78,4 +84,36 @@ thead{
         position: relative;
         width: 130px;
     }   
+
+}
+@media only screen and (min-width: 501px) and (max-width: 1000px) {
+   
+    h1{
+        font-size: 30px;
+    }
+    .tutorial{
+        position: relative;
+        width: 500px;
+        right: 10%;
+        }
+        .col-sm-4{
+            position: relative;
+            width: 170px;
+        }
+}
+@media only screen and (max-width: 500px) {
+
+    .tutorial{
+        position: relative;
+        width: 300px;
+        }
+
+    .header-bar, .sub-header, .header-nav{
+        font-size: 13px;
+    }
+    .col-sm-4{
+        position: relative;
+        width: 170px;
+        left: 10%;
+    }
 }
