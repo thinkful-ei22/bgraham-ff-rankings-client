@@ -97,16 +97,16 @@
 }
 .content .close{
 position: relative;
-right: 33%;
+right: 37%;
 }
 
 .content .credits{
 	position: relative;
-	left: 37%;
+	left: 40%;
 	}
 .content .espn-credits{
 		position: relative;
-		left: 41.5%;
+		left: 43%;
 		}
 
 h4{
@@ -114,7 +114,61 @@ h4{
 }
 
 
-@media only screen and (min-width: 769px) and (max-width:1366px ){
+
+
+
+@media only screen and (min-width: 1280px) and (max-width: 1365px){
+	.content .close{
+		position: relative;
+		right: 37%;
+		}
+		.about-overlay {
+			height: 100%;
+		
+		}
+		.content .credits{
+			position: relative;
+			left: 40%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 43%;
+				text-align: center;
+				}
+	
+		
+}
+@media only screen and (min-width: 1365px){
+
+.about-overlay {
+	height: 100%;
+
+}
+}
+@media only screen and (min-width: 1024px) and (max-width:1279px ){
+	.content .close{
+		position: relative;
+		right: 33%;
+		}
+		.about-overlay {
+			height: 100%;
+		
+		}
+		.content .credits{
+			position: relative;
+			left: 37%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 41%;
+				text-align: center;
+				}
+	
+		
+}
+
+
+@media only screen and (min-width: 769px) and (max-width:1023px ){
 	.content .close{
 		position: relative;
 		right: 28%;
@@ -127,11 +181,69 @@ h4{
 		.content .espn-credits{
 				position: relative;
 				left: 38%;
+				text-align: center;
 				}
 	
 		
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (min-width: 736px) and (max-width:768px ){
+	.content .close{
+		position: relative;
+		right: 25%;
+		}
+
+		.content .credits{
+			position: relative;
+			left: 30%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 36%;
+				text-align: center;
+				}
+	
+		
+}
+
+@media only screen and (min-width: 640px) and (max-width:735px ){
+	.content .close{
+		position: relative;
+		right: 20%;
+		}
+
+		.content .credits{
+			position: relative;
+			left: 27%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 34%;
+				text-align: center;
+				}
+	
+		
+}
+
+@media only screen and (min-width: 501px) and (max-width:639px ){
+	.content .close{
+		position: relative;
+		right: 10%;
+		}
+
+		.content .credits{
+			position: relative;
+			left: 20%;
+			}
+		.content .espn-credits{
+				position: relative;
+				left: 29%;
+				text-align: center;
+				}
+	
+		
+}
+
+@media only screen and (max-width: 500px) {
 	.content .close{
 		position: relative;
 		right: 1%;
@@ -145,5 +257,7 @@ h4{
 		.content .espn-credits{
 				position: relative;
 				left: 14%;
+				text-align: center;
+
 				}
 }
